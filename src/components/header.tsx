@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const  Header =() => {
   return (
-   <header className="bg-blue-500 border-b-2 sticky top-0 z-50">
+   <header className="bg-indigo-600 border-b-2 border-gray-200 sticky top-0 z-5">
   <div className="max-w-7xl mx-auto px-4">
     <div className="flex items-center h-16">
       

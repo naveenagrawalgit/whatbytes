@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import products from '../../data/product'
 import { ShoppingCart } from 'lucide-react'
+import Link from 'next/link'
 const Card = () => {
 
     console.log(products, "inside product")
@@ -11,10 +12,13 @@ const Card = () => {
   {products.map((product, index) => (
     <div 
       key={index}
-      className='w-full sm:w-[48%] lg:w-[30%] xl:w-[23%] rounded-lg border-2 border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white'
+      className='w-full sm:w-[50%] lg:w-[30%] xl:w-[23%] rounded-lg border-2 border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white'
     >
       {/* Product Image */}
-      <div className='h-48 flex items-center justify-center p-4 bg-gray-50'>
+
+      <Link href="/product">
+
+       <div className='h-48 flex items-center justify-center p-4 bg-gray-50'>
         <Image
           src={
             product.category === "phone" ? "/phone.webp" :
@@ -30,6 +34,11 @@ const Card = () => {
           className="h-auto w-auto max-h-full object-contain hover:cursor-pointer"
         />
       </div>
+
+
+      </Link>
+
+     
 
       {/* Product Info */}
       <div className='p-4 space-y-3'>
