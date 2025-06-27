@@ -3,6 +3,7 @@ import Image from 'next/image'
 import products from '../../data/product'
 import { ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
+import AddCartButton from './AddCartButton'
 const Card = () => {
 
     console.log(products, "inside product")
@@ -10,6 +11,7 @@ const Card = () => {
     return (
         <div className='flex flex-wrap justify-center gap-6 p-4'>
   {products.map((product, index) => (
+
     <div 
       key={index}
       className='w-full sm:w-[50%] lg:w-[30%] xl:w-[23%] rounded-lg border-2 border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white'
@@ -36,7 +38,6 @@ const Card = () => {
       </div>
 
 
-      </Link>
 
      
 
@@ -52,12 +53,17 @@ const Card = () => {
       </div>
 
       {/* Add to Cart Button */}
-      <div className='p-4 pt-2'>
+      {/* <div className='p-4 pt-2'>
         <button className=' hover:cursor-pointer w-full bg-blue-800 hover:bg-blue-900 text-white rounded-lg py-2 px-4 shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2'>
-          <ShoppingCart className="h-5 w-5" />
+          <ShoppingCart className="h-5 w-5"   />
           Add to cart
         </button>
-      </div>
+      </div> */}
+      <AddCartButton/>
+      
+      </Link>
+
+      
     </div>
   ))}
 </div>
