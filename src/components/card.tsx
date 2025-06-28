@@ -6,7 +6,7 @@ import Link from 'next/link'
 import AddCartButton from './AddCartButton'
 const Card = () => {
 
-    console.log(products, "inside product")
+    
 
     return (
         <div className='flex flex-wrap justify-center gap-6 p-4'>
@@ -18,7 +18,7 @@ const Card = () => {
     >
       {/* Product Image */}
 
-      <Link href="/product">
+      <Link href={`/product/${product.id}`}>
 
        <div className='h-48 flex items-center justify-center p-4 bg-gray-50'>
         <Image
@@ -60,7 +60,7 @@ const Card = () => {
         </button>
       </div> */}
       <AddCartButton/>
-      
+
       </Link>
 
       

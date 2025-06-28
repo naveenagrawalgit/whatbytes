@@ -1,8 +1,14 @@
 import React from 'react'
-import products from '../../../data/product'
+import products from '../../../../data/product'
 import Image from 'next/image'
 
-const ProductPage = () => {
+const ProductPage = async ({params} : {params: Promise<{productId : string}>}) => {
+  
+  
+  const id = await params;
+  
+  console.log(id, 'value of id')
+
   return (
     <div className='w-full h-screen flex pt-10 justify-center items-center' >
 
@@ -18,7 +24,7 @@ const ProductPage = () => {
 
 
         
-        page</div>
+        page product Id is:-- {id.productId} </div>
   )
 }
 
