@@ -18,13 +18,17 @@ export default function Home({
       </div>
       
       {/* Mobile Sidebar will appear as overlay when toggled */}
-      <div className="lg:hidden">
-        <SideBar />
-      </div>
+      <Suspense fallback={null}>
+        <div className="lg:hidden">
+          <SideBar />
+        </div>
+      </Suspense>
       
       {/* Content area */}
       <div className="w-full lg:w-3/4">
-        <Card searchParams={searchParams} />
+        <Suspense fallback={<div>Loading products...</div>}>
+          <Card searchParams={searchParams} />
+        </Suspense>
       </div>
     </div>
   );
