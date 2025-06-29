@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import products from '../../data/product';
 import { Product, ProductCategory } from '../../data/types';
-import AddCartButton from './addCartButton';
+import AddCartButton from './AddCartButton';
 
 interface CardProps {
   searchParams: {

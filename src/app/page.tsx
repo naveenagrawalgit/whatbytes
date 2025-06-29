@@ -1,4 +1,4 @@
-import { SideBar } from '../components/sideBar';
+import { SideBar } from '../components/SideBar';
 import Card from '../components/card';
 import { ProductCategory } from '../../data/types';
 
