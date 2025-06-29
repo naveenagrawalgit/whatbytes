@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import products from '../../data/product';
 import { Product, ProductCategory } from '../../data/types';
+import AddCartButton from './addCartButton';
 
 interface CardProps {
   searchParams: {
@@ -68,6 +69,11 @@ const Card = ({ searchParams }: CardProps) => {
                 </p>
               </div>
             </Link>
+            
+            {/* Add to Cart Button - Placed outside the Link to avoid nested links */}
+            <div className="p-4 pt-0">
+              <AddCartButton  />
+            </div>
           </div>
         ))
       ) : (
