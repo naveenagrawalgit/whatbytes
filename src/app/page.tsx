@@ -10,7 +10,7 @@ interface HomeProps {
     search?: string;
   };
 }
-//@ts-expect-error
+// @ts-expect-error - Disabling type checking for deployment
 export default function Home({ searchParams }: HomeProps) {
   return (
     <div className="flex pt-12 gap-4 px-4">
