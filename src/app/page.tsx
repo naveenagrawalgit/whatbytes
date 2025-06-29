@@ -9,13 +9,21 @@ export default function Home({
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   return (
-    <div className="flex pt-12 gap-4 px-4">
-      <div className="w-1/4 sticky top-12 h-fit">
+    <div className="flex flex-col lg:flex-row pt-16 gap-6 px-4">
+      {/* Sidebar - hidden on mobile, shown on desktop */}
+      <div className="hidden lg:block lg:w-1/4 sticky top-16 h-fit">
         <Suspense fallback={<div className="p-4 bg-white rounded-lg">Loading filters...</div>}>
           <SideBar />
         </Suspense>
       </div>
-      <div className="w-3/4">
+      
+      {/* Mobile Sidebar will appear as overlay when toggled */}
+      <div className="lg:hidden">
+        <SideBar />
+      </div>
+      
+      {/* Content area */}
+      <div className="w-full lg:w-3/4">
         <Card searchParams={searchParams} />
       </div>
     </div>
