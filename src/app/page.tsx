@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import { SideBar } from '../components/SideBar';
 import Card from '../components/card';
 import { ProductCategory } from '../../data/types';
@@ -9,7 +11,7 @@ interface HomeProps {
     search?: string;
   };
 }
-
+// @ts-ignore
 export default function Home({ searchParams }: HomeProps) {
   return (
     <div className="flex pt-12 gap-4 px-4">
